@@ -1,0 +1,95 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ReportGenerator.UI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+        x:Class="ReportGenerator.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{Binding Title}"
+        Width="1000" Height="600">
+
+    <DockPanel>
+        <!-- Status Bar -->
+        <Border DockPanel.Dock="Bottom" Background="#f0f0f0" Padding="8">
+            <TextBlock Text="{Binding StatusMessage}" />
+        </Border>
+
+        <!-- Toolbar -->
+        <Border DockPanel.Dock="Top" Background="#e0e0e0" Padding="8">
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button Content="New Template" Command="{Binding CreateNewTemplateCommand}" />
+                <Button Content="🎨 Open Designer" Command="{Binding OpenDesignerCommand}"
+                        IsEnabled="{Binding SelectedTemplate, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                <Button Content="Refresh" Command="{Binding LoadTemplatesCommand}" />
+                <Button Content="Delete" Command="{Binding DeleteTemplateCommand}"
+                        IsEnabled="{Binding SelectedTemplate, Converter={x:Static ObjectConverters.IsNotNull}}" />
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content -->
+        <Grid ColumnDefinitions="300,*">
+            <!-- Template List -->
+            <Border Grid.Column="0" BorderBrush="#cccccc" BorderThickness="0,0,1,0" Padding="8">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Templates" FontWeight="Bold" Margin="0,0,0,8" />
+                    <ListBox ItemsSource="{Binding Templates}"
+                             SelectedItem="{Binding SelectedTemplate}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                                    <TextBlock Text="{Binding Description}" Foreground="Gray" FontSize="11" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Border>
+
+            <!-- Template Details -->
+            <Border Grid.Column="1" Padding="16">
+                <StackPanel IsVisible="{Binding SelectedTemplate, Converter={x:Static ObjectConverters.IsNotNull}}">
+                    <TextBlock Text="Template Details" FontSize="18" FontWeight="Bold" Margin="0,0,0,16" />
+
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="120,*" RowSpacing="8">
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SelectedTemplate.Name}" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Description:" VerticalAlignment="Top" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SelectedTemplate.Description}"
+                                 Height="60" AcceptsReturn="True" TextWrapping="Wrap" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Author:" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding SelectedTemplate.Author}" IsReadOnly="True" />
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Orientation:" VerticalAlignment="Center" />
+                        <ComboBox Grid.Row="3" Grid.Column="1"
+                                  ItemsSource="{Binding AvailableOrientations}"
+                                  SelectedItem="{Binding SelectedTemplate.Orientation}" />
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Paper Size:" VerticalAlignment="Center" />
+                        <ComboBox Grid.Row="4" Grid.Column="1"
+                                  ItemsSource="{Binding AvailablePaperSizes}"
+                                  SelectedItem="{Binding SelectedTemplate.PaperSize}" />
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Sections:" VerticalAlignment="Top" Margin="0,8,0,0" />
+                        <ListBox Grid.Row="5" Grid.Column="1" ItemsSource="{Binding SelectedTemplate.Sections}" Height="150">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Run Text="{Binding Name}" FontWeight="Bold" />
+                                        <Run Text=" - " />
+                                        <Run Text="{Binding Type}" />
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+
+</Window>

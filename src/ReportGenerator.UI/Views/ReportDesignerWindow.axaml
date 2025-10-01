@@ -1,0 +1,254 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ReportGenerator.UI.ViewModels"
+        xmlns:domain="using:ReportGenerator.Domain.Entities"
+        xmlns:converters="using:ReportGenerator.UI.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="800"
+        x:Class="ReportGenerator.UI.Views.ReportDesignerWindow"
+        x:DataType="vm:ReportDesignerViewModel"
+        Title="Report Designer"
+        Width="1400" Height="800">
+
+    <Window.Resources>
+        <converters:PaperSizeToWidthConverter x:Key="PaperSizeToWidthConverter"/>
+    </Window.Resources>
+
+    <DockPanel>
+        <!-- Status Bar -->
+        <Border DockPanel.Dock="Bottom" Background="#f0f0f0" Padding="8">
+            <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+                <TextBlock Grid.Column="0" Text="{Binding StatusMessage}" />
+                <TextBlock Grid.Column="1" Text="{Binding ZoomLevel, StringFormat='Zoom: {0:P0}'}" Margin="16,0,0,0" />
+                <TextBlock Grid.Column="2" Text="{Binding Template.Sections.Count, StringFormat='Sections: {0}'}" Margin="16,0,0,0" />
+                <TextBlock Grid.Column="3" Text="{Binding SelectedSection.Elements.Count, StringFormat='Elements: {0}'}" Margin="16,0,0,0" />
+            </Grid>
+        </Border>
+
+        <!-- Toolbar -->
+        <Border DockPanel.Dock="Top" Background="#e0e0e0" Padding="8">
+            <StackPanel Orientation="Horizontal" Spacing="4">
+                <!-- File Operations -->
+                <Button Content="💾 Save" Command="{Binding SaveTemplateCommand}" ToolTip.Tip="Save Template (Ctrl+S)" />
+                <Separator Width="1" Height="24" Background="#cccccc" Margin="4,0" />
+
+                <!-- View Controls -->
+                <Button Content="🔍+" Command="{Binding ZoomInCommand}" ToolTip.Tip="Zoom In (Ctrl++)" Width="36" />
+                <Button Content="🔍-" Command="{Binding ZoomOutCommand}" ToolTip.Tip="Zoom Out (Ctrl+-)" Width="36" />
+                <Button Content="100%" Command="{Binding ZoomResetCommand}" ToolTip.Tip="Reset Zoom (Ctrl+0)" Width="48" />
+                <Separator Width="1" Height="24" Background="#cccccc" Margin="4,0" />
+
+                <!-- Grid Controls -->
+                <ToggleButton Content="📐 Grid" IsChecked="{Binding ShowGrid}" ToolTip.Tip="Show/Hide Grid" />
+                <ToggleButton Content="🧲 Snap" IsChecked="{Binding SnapToGrid}" ToolTip.Tip="Snap to Grid" />
+                <Separator Width="1" Height="24" Background="#cccccc" Margin="4,0" />
+
+                <!-- Element Operations -->
+                <Button Content="❌ Delete" Command="{Binding RemoveElementCommand}"
+                        IsEnabled="{Binding SelectedElement, Converter={x:Static ObjectConverters.IsNotNull}}"
+                        ToolTip.Tip="Delete Selected Element (Del)" />
+                <Button Content="📋 Duplicate" Command="{Binding DuplicateElementCommand}"
+                        IsEnabled="{Binding SelectedElement, Converter={x:Static ObjectConverters.IsNotNull}}"
+                        ToolTip.Tip="Duplicate Selected Element (Ctrl+D)" />
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content -->
+        <Grid ColumnDefinitions="200,*,280">
+
+            <!-- Left Panel: Toolbox -->
+            <Border Grid.Column="0" BorderBrush="#cccccc" BorderThickness="0,0,1,0" Padding="8" Background="#fafafa">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Toolbox" FontWeight="Bold" FontSize="14" Margin="0,0,0,12" />
+
+                    <!-- Element Types -->
+                    <ScrollViewer>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Elements" FontWeight="Bold" Margin="0,0,0,4" />
+
+                            <Button Content="📝 Label" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Label}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="📄 Text Field" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.TextField}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="🧮 Calculated Field" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.CalculatedField}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Separator Height="1" Background="#ddd" Margin="0,8" />
+                            <TextBlock Text="Shapes" FontWeight="Bold" Margin="0,0,0,4" />
+
+                            <Button Content="➖ Line" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Line}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="▭ Rectangle" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Rectangle}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="⬜ Rounded Rect" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.RoundedRectangle}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="⭕ Ellipse" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Ellipse}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Separator Height="1" Background="#ddd" Margin="0,8" />
+                            <TextBlock Text="Special" FontWeight="Bold" Margin="0,0,0,4" />
+
+                            <Button Content="🖼️ Image" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Image}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="📊 Barcode" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.Barcode}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+
+                            <Button Content="📱 QR Code" Command="{Binding AddElementCommand}"
+                                    CommandParameter="{x:Static domain:ElementType.QRCode}"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+
+            <!-- Center Panel: Designer Canvas -->
+            <Border Grid.Column="1" Background="#e8e8e8" ClipToBounds="True">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Border Margin="20" Background="White" BorderBrush="#999" BorderThickness="1"
+                            Width="{Binding Template.PaperSize, Converter={StaticResource PaperSizeToWidthConverter}}"
+                            Height="800">
+                        <Canvas Background="White">
+                            <!-- Grid Background (if enabled) -->
+                            <Rectangle IsVisible="{Binding ShowGrid}"
+                                      Width="{Binding $parent[Canvas].Bounds.Width}"
+                                      Height="{Binding $parent[Canvas].Bounds.Height}"
+                                      Fill="#f9f9f9" Opacity="0.5" />
+
+                            <!-- Sections will be rendered here -->
+                            <TextBlock Canvas.Left="10" Canvas.Top="10"
+                                      Text="{Binding Template.Name, StringFormat='Template: {0}'}"
+                                      FontSize="16" FontWeight="Bold" Foreground="#666" />
+
+                            <TextBlock Canvas.Left="10" Canvas.Top="35"
+                                      Text="Designer canvas - Sections and elements will be rendered here"
+                                      Foreground="#999" />
+                        </Canvas>
+                    </Border>
+                </ScrollViewer>
+            </Border>
+
+            <!-- Right Panel: Properties -->
+            <Border Grid.Column="2" BorderBrush="#cccccc" BorderThickness="1,0,0,0" Padding="12" Background="#fafafa">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Properties" FontWeight="Bold" FontSize="14" Margin="0,0,0,12" />
+
+                    <ScrollViewer>
+                        <StackPanel Spacing="8" IsVisible="{Binding SelectedElement, Converter={x:Static ObjectConverters.IsNotNull}}">
+
+                            <!-- Element Info -->
+                            <TextBlock Text="Element" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Name:" FontSize="11" Foreground="#666" />
+                                <TextBox Text="{Binding SelectedElement.Name}" />
+
+                                <TextBlock Text="Type:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <TextBlock Text="{Binding SelectedElement.Type}" FontWeight="Bold" />
+                            </StackPanel>
+
+                            <Separator Height="1" Background="#ddd" />
+
+                            <!-- Position & Size -->
+                            <TextBlock Text="Position &amp; Size" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                                    <StackPanel Grid.Column="0">
+                                        <TextBlock Text="X:" FontSize="11" Foreground="#666" />
+                                        <NumericUpDown Value="{Binding SelectedElement.X}" Minimum="0" FormatString="0.0" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="Y:" FontSize="11" Foreground="#666" />
+                                        <NumericUpDown Value="{Binding SelectedElement.Y}" Minimum="0" FormatString="0.0" />
+                                    </StackPanel>
+                                </Grid>
+
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                                    <StackPanel Grid.Column="0">
+                                        <TextBlock Text="Width:" FontSize="11" Foreground="#666" />
+                                        <NumericUpDown Value="{Binding SelectedElement.Width}" Minimum="1" FormatString="0.0" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="Height:" FontSize="11" Foreground="#666" />
+                                        <NumericUpDown Value="{Binding SelectedElement.Height}" Minimum="1" FormatString="0.0" />
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+
+                            <Separator Height="1" Background="#ddd" />
+
+                            <!-- Font Properties -->
+                            <TextBlock Text="Font" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Font Family:" FontSize="11" Foreground="#666" />
+                                <ComboBox ItemsSource="{Binding AvailableFontFamilies}"
+                                          SelectedItem="{Binding SelectedElement.FontFamily}" />
+
+                                <TextBlock Text="Font Size:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <NumericUpDown Value="{Binding SelectedElement.FontSize}" Minimum="6" Maximum="72" />
+
+                                <CheckBox Content="Bold" IsChecked="{Binding SelectedElement.FontBold}" Margin="0,4,0,0" />
+                                <CheckBox Content="Italic" IsChecked="{Binding SelectedElement.FontItalic}" />
+                            </StackPanel>
+
+                            <Separator Height="1" Background="#ddd" />
+
+                            <!-- Text Alignment -->
+                            <TextBlock Text="Alignment" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Horizontal:" FontSize="11" Foreground="#666" />
+                                <ComboBox ItemsSource="{Binding AvailableTextAlignments}"
+                                          SelectedItem="{Binding SelectedElement.TextAlign}" />
+
+                                <TextBlock Text="Vertical:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <ComboBox ItemsSource="{Binding AvailableVerticalAlignments}"
+                                          SelectedItem="{Binding SelectedElement.VerticalAlign}" />
+                            </StackPanel>
+
+                            <Separator Height="1" Background="#ddd" />
+
+                            <!-- Colors -->
+                            <TextBlock Text="Colors" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Foreground:" FontSize="11" Foreground="#666" />
+                                <TextBox Text="{Binding SelectedElement.ForeColor}" />
+
+                                <TextBlock Text="Background:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <TextBox Text="{Binding SelectedElement.BackColor}" />
+                            </StackPanel>
+
+                            <Separator Height="1" Background="#ddd" />
+
+                            <!-- Content -->
+                            <TextBlock Text="Content" FontWeight="Bold" />
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Static Text:" FontSize="11" Foreground="#666" />
+                                <TextBox Text="{Binding SelectedElement.StaticText}" AcceptsReturn="True" Height="60" />
+
+                                <TextBlock Text="Data Field:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <TextBox Text="{Binding SelectedElement.DataField}" />
+
+                                <TextBlock Text="Expression:" FontSize="11" Foreground="#666" Margin="0,4,0,0" />
+                                <TextBox Text="{Binding SelectedElement.Expression}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

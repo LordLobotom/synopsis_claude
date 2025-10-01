@@ -1,0 +1,159 @@
+2025-10-01 20:37:38.566 +02:00 [INF] === Report Generator Starting ===
+2025-10-01 20:37:38.609 +02:00 [INF] Initializing application
+2025-10-01 20:37:38.660 +02:00 [INF] Configuring services
+2025-10-01 20:37:38.660 +02:00 [DBG] Registering DbContext
+2025-10-01 20:37:38.663 +02:00 [DBG] Registering repositories
+2025-10-01 20:37:38.663 +02:00 [DBG] Registering domain services
+2025-10-01 20:37:38.663 +02:00 [DBG] Registering application services
+2025-10-01 20:37:38.663 +02:00 [DBG] Registering ViewModels
+2025-10-01 20:37:38.663 +02:00 [DBG] Building service provider
+2025-10-01 20:37:38.670 +02:00 [INF] Services configured successfully
+2025-10-01 20:37:38.670 +02:00 [INF] Application initialized successfully
+2025-10-01 20:37:38.712 +02:00 [INF] Framework initialization starting
+2025-10-01 20:37:38.712 +02:00 [DBG] Desktop lifetime detected
+2025-10-01 20:37:38.712 +02:00 [DBG] Disabling Avalonia data annotation validation
+2025-10-01 20:37:38.713 +02:00 [INF] Initializing database
+2025-10-01 20:37:39.296 +02:00 [INF] Database initialized
+2025-10-01 20:37:39.296 +02:00 [DBG] Creating MainWindow
+2025-10-01 20:37:39.791 +02:00 [INF] MainWindow created successfully
+2025-10-01 20:37:39.791 +02:00 [INF] Framework initialization completed
+2025-10-01 20:37:47.147 +02:00 [INF] OpenDesigner called
+2025-10-01 20:37:47.148 +02:00 [INF] OpenDesigner: Creating designer window for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 20:37:47.151 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:37:47.171 +02:00 [ERR] OpenDesigner: Error opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+System.Collections.Generic.KeyNotFoundException: Static resource 'PaperSizeToWidthConverter' not found.
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider, Object resourceKey)
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulate(IServiceProvider, ReportDesignerWindow) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views/ReportDesignerWindow.axaml:line 119
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulateTrampoline(ReportDesignerWindow)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.InitializeComponent(Boolean loadXaml, Boolean attachDevTools) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Avalonia.Generators\Avalonia.Generators.NameGenerator.AvaloniaNameSourceGenerator\ReportGenerator.UI.Views.ReportDesignerWindow.g.cs:line 25
+   at ReportGenerator.UI.Views.ReportDesignerWindow..ctor() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views\ReportDesignerWindow.axaml.cs:line 10
+   at ReportGenerator.UI.ViewModels.MainWindowViewModel.OpenDesigner() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\ViewModels\MainWindowViewModel.cs:line 125
+2025-10-01 20:37:56.552 +02:00 [INF] OpenDesigner called
+2025-10-01 20:37:56.552 +02:00 [INF] OpenDesigner: Creating designer window for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 20:37:56.552 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:37:56.557 +02:00 [ERR] OpenDesigner: Error opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+System.Collections.Generic.KeyNotFoundException: Static resource 'PaperSizeToWidthConverter' not found.
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider, Object resourceKey)
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulate(IServiceProvider, ReportDesignerWindow) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views/ReportDesignerWindow.axaml:line 119
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulateTrampoline(ReportDesignerWindow)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.InitializeComponent(Boolean loadXaml, Boolean attachDevTools) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Avalonia.Generators\Avalonia.Generators.NameGenerator.AvaloniaNameSourceGenerator\ReportGenerator.UI.Views.ReportDesignerWindow.g.cs:line 25
+   at ReportGenerator.UI.Views.ReportDesignerWindow..ctor() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views\ReportDesignerWindow.axaml.cs:line 10
+   at ReportGenerator.UI.ViewModels.MainWindowViewModel.OpenDesigner() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\ViewModels\MainWindowViewModel.cs:line 125
+2025-10-01 20:37:58.316 +02:00 [INF] OpenDesigner called
+2025-10-01 20:37:58.316 +02:00 [INF] OpenDesigner: Creating designer window for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 20:37:58.316 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:37:58.321 +02:00 [ERR] OpenDesigner: Error opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+System.Collections.Generic.KeyNotFoundException: Static resource 'PaperSizeToWidthConverter' not found.
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider, Object resourceKey)
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulate(IServiceProvider, ReportDesignerWindow) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views/ReportDesignerWindow.axaml:line 119
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulateTrampoline(ReportDesignerWindow)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.InitializeComponent(Boolean loadXaml, Boolean attachDevTools) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Avalonia.Generators\Avalonia.Generators.NameGenerator.AvaloniaNameSourceGenerator\ReportGenerator.UI.Views.ReportDesignerWindow.g.cs:line 25
+   at ReportGenerator.UI.Views.ReportDesignerWindow..ctor() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views\ReportDesignerWindow.axaml.cs:line 10
+   at ReportGenerator.UI.ViewModels.MainWindowViewModel.OpenDesigner() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\ViewModels\MainWindowViewModel.cs:line 125
+2025-10-01 20:38:00.256 +02:00 [INF] OpenDesigner called
+2025-10-01 20:38:00.256 +02:00 [INF] OpenDesigner: Creating designer window for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 20:38:00.256 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:38:00.260 +02:00 [ERR] OpenDesigner: Error opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+System.Collections.Generic.KeyNotFoundException: Static resource 'PaperSizeToWidthConverter' not found.
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider, Object resourceKey)
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulate(IServiceProvider, ReportDesignerWindow) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views/ReportDesignerWindow.axaml:line 119
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulateTrampoline(ReportDesignerWindow)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.InitializeComponent(Boolean loadXaml, Boolean attachDevTools) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Avalonia.Generators\Avalonia.Generators.NameGenerator.AvaloniaNameSourceGenerator\ReportGenerator.UI.Views.ReportDesignerWindow.g.cs:line 25
+   at ReportGenerator.UI.Views.ReportDesignerWindow..ctor() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views\ReportDesignerWindow.axaml.cs:line 10
+   at ReportGenerator.UI.ViewModels.MainWindowViewModel.OpenDesigner() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\ViewModels\MainWindowViewModel.cs:line 125
+2025-10-01 20:38:40.302 +02:00 [INF] OpenDesigner called
+2025-10-01 20:38:40.303 +02:00 [INF] OpenDesigner: Creating designer window for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 20:38:40.303 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:38:40.307 +02:00 [ERR] OpenDesigner: Error opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+System.Collections.Generic.KeyNotFoundException: Static resource 'PaperSizeToWidthConverter' not found.
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider, Object resourceKey)
+   at Avalonia.Markup.Xaml.MarkupExtensions.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulate(IServiceProvider, ReportDesignerWindow) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views/ReportDesignerWindow.axaml:line 119
+   at ReportGenerator.UI.Views.ReportDesignerWindow.!XamlIlPopulateTrampoline(ReportDesignerWindow)
+   at ReportGenerator.UI.Views.ReportDesignerWindow.InitializeComponent(Boolean loadXaml, Boolean attachDevTools) in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Avalonia.Generators\Avalonia.Generators.NameGenerator.AvaloniaNameSourceGenerator\ReportGenerator.UI.Views.ReportDesignerWindow.g.cs:line 25
+   at ReportGenerator.UI.Views.ReportDesignerWindow..ctor() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\Views\ReportDesignerWindow.axaml.cs:line 10
+   at ReportGenerator.UI.ViewModels.MainWindowViewModel.OpenDesigner() in C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\ViewModels\MainWindowViewModel.cs:line 125
+2025-10-01 20:41:37.753 +02:00 [INF] === Report Generator Starting ===
+2025-10-01 20:41:37.797 +02:00 [INF] Initializing application
+2025-10-01 20:41:37.853 +02:00 [INF] Configuring services
+2025-10-01 20:41:37.853 +02:00 [DBG] Registering DbContext
+2025-10-01 20:41:37.856 +02:00 [DBG] Registering repositories
+2025-10-01 20:41:37.856 +02:00 [DBG] Registering domain services
+2025-10-01 20:41:37.856 +02:00 [DBG] Registering application services
+2025-10-01 20:41:37.856 +02:00 [DBG] Registering ViewModels
+2025-10-01 20:41:37.856 +02:00 [DBG] Building service provider
+2025-10-01 20:41:37.864 +02:00 [INF] Services configured successfully
+2025-10-01 20:41:37.865 +02:00 [INF] Application initialized successfully
+2025-10-01 20:41:37.905 +02:00 [INF] Framework initialization starting
+2025-10-01 20:41:37.905 +02:00 [DBG] Desktop lifetime detected
+2025-10-01 20:41:37.905 +02:00 [DBG] Disabling Avalonia data annotation validation
+2025-10-01 20:41:37.906 +02:00 [INF] Initializing database
+2025-10-01 20:41:38.515 +02:00 [INF] Database initialized
+2025-10-01 20:41:38.515 +02:00 [DBG] Creating MainWindow
+2025-10-01 20:41:39.060 +02:00 [INF] MainWindow created successfully
+2025-10-01 20:41:39.060 +02:00 [INF] Framework initialization completed
+2025-10-01 20:41:47.282 +02:00 [INF] OpenDesigner called
+2025-10-01 20:41:47.283 +02:00 [INF] OpenDesigner: Creating designer window for template "2064e9cd-3556-43d3-aba0-39b0075fac59" - New Report
+2025-10-01 20:41:47.287 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:41:47.332 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 20:41:47.335 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 20:41:47.335 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 20:41:47.335 +02:00 [DBG] OpenDesigner: Setting DataContext
+2025-10-01 20:41:47.341 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 20:41:47.342 +02:00 [INF] LoadTemplateAsync called for template "2064e9cd-3556-43d3-aba0-39b0075fac59"
+2025-10-01 20:41:47.342 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 20:41:47.435 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 20:41:47.436 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 20:41:47.436 +02:00 [DBG] OpenDesigner: Showing window
+2025-10-01 20:41:47.478 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 20:42:28.038 +02:00 [INF] OpenDesigner called
+2025-10-01 20:42:28.038 +02:00 [INF] OpenDesigner: Creating designer window for template "2064e9cd-3556-43d3-aba0-39b0075fac59" - New Report
+2025-10-01 20:42:28.038 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:42:28.043 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 20:42:28.044 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 20:42:28.044 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 20:42:28.044 +02:00 [DBG] OpenDesigner: Setting DataContext
+2025-10-01 20:42:28.044 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 20:42:28.045 +02:00 [INF] LoadTemplateAsync called for template "2064e9cd-3556-43d3-aba0-39b0075fac59"
+2025-10-01 20:42:28.045 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 20:42:28.047 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 20:42:28.047 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 20:42:28.047 +02:00 [DBG] OpenDesigner: Showing window
+2025-10-01 20:42:28.062 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 20:47:41.138 +02:00 [INF] === Report Generator Starting ===
+2025-10-01 20:47:41.181 +02:00 [INF] Initializing application
+2025-10-01 20:47:41.234 +02:00 [INF] Configuring services
+2025-10-01 20:47:41.234 +02:00 [DBG] Registering DbContext
+2025-10-01 20:47:41.237 +02:00 [DBG] Registering repositories
+2025-10-01 20:47:41.237 +02:00 [DBG] Registering domain services
+2025-10-01 20:47:41.237 +02:00 [DBG] Registering application services
+2025-10-01 20:47:41.237 +02:00 [DBG] Registering ViewModels
+2025-10-01 20:47:41.237 +02:00 [DBG] Building service provider
+2025-10-01 20:47:41.244 +02:00 [INF] Services configured successfully
+2025-10-01 20:47:41.244 +02:00 [INF] Application initialized successfully
+2025-10-01 20:47:41.285 +02:00 [INF] Framework initialization starting
+2025-10-01 20:47:41.286 +02:00 [DBG] Desktop lifetime detected
+2025-10-01 20:47:41.286 +02:00 [DBG] Disabling Avalonia data annotation validation
+2025-10-01 20:47:41.287 +02:00 [INF] Initializing database
+2025-10-01 20:47:41.874 +02:00 [INF] Database initialized
+2025-10-01 20:47:41.874 +02:00 [DBG] Creating MainWindow
+2025-10-01 20:47:42.473 +02:00 [INF] MainWindow created successfully
+2025-10-01 20:47:42.473 +02:00 [INF] Framework initialization completed
+2025-10-01 20:47:46.539 +02:00 [INF] OpenDesigner called
+2025-10-01 20:47:46.540 +02:00 [INF] OpenDesigner: Creating designer window for template "350d61e3-0fef-4e0f-af29-38f01d5a5085" - New Report
+2025-10-01 20:47:46.543 +02:00 [DBG] OpenDesigner: Creating ReportDesignerWindow instance
+2025-10-01 20:47:46.588 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 20:47:46.591 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 20:47:46.591 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 20:47:46.591 +02:00 [DBG] OpenDesigner: Setting DataContext
+2025-10-01 20:47:46.597 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 20:47:46.598 +02:00 [INF] LoadTemplateAsync called for template "350d61e3-0fef-4e0f-af29-38f01d5a5085"
+2025-10-01 20:47:46.598 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 20:47:46.699 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 20:47:46.700 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 20:47:46.700 +02:00 [DBG] OpenDesigner: Showing window
+2025-10-01 20:47:46.742 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'

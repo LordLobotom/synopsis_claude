@@ -1,0 +1,160 @@
+
+# Windows Setup Instructions
+
+## ✅ Solution Copied Successfully!
+
+The Report Generator solution has been copied to:
+```
+C:\Users\eMich\source\synopsis_claude
+```
+
+## 🚀 Quick Start on Windows
+
+### 1. Open in Visual Studio 2022 (Recommended)
+
+```powershell
+# Navigate to the directory
+cd C:\Users\eMich\source\synopsis_claude
+
+# Open solution in Visual Studio
+start ReportGenerator.sln
+```
+
+Or simply double-click `ReportGenerator.sln` in File Explorer.
+
+### 2. Restore NuGet Packages
+
+In Visual Studio:
+- Right-click solution → "Restore NuGet Packages"
+
+Or via command line:
+```powershell
+dotnet restore
+```
+
+### 3. Build the Solution
+
+In Visual Studio:
+- Press `Ctrl+Shift+B` or Build → Build Solution
+
+Or via command line:
+```powershell
+dotnet build
+```
+
+### 4. Run the Application
+
+In Visual Studio:
+- Set `ReportGenerator.UI` as startup project (right-click → Set as Startup Project)
+- Press `F5` to run
+
+Or via command line:
+```powershell
+dotnet run --project src\ReportGenerator.UI\ReportGenerator.UI.csproj
+```
+
+## 🔧 Alternative: Use JetBrains Rider
+
+```powershell
+cd C:\Users\eMich\source\synopsis_claude
+rider ReportGenerator.sln
+```
+
+## 🔧 Alternative: Use VS Code
+
+```powershell
+cd C:\Users\eMich\source\synopsis_claude
+code .
+```
+
+Then press `F5` to run.
+
+## ✅ Verify Installation
+
+### Run Tests
+```powershell
+dotnet test
+```
+
+Expected output: **Passed! - Failed: 0, Passed: 1**
+
+### Check Build
+```powershell
+dotnet build
+```
+
+Expected output: **Build succeeded. 0 Error(s)**
+
+## 📦 What Was Copied
+
+```
+synopsis_claude/
+├── src/
+│   ├── ReportGenerator.Domain/
+│   ├── ReportGenerator.Application/
+│   ├── ReportGenerator.Infrastructure/
+│   └── ReportGenerator.UI/
+├── tests/
+│   └── ReportGenerator.Tests/
+├── docs/                          # Complete documentation
+├── ReportGenerator.sln
+├── README.md
+├── PROGRESS.md
+└── WINDOWS_SETUP.md              # This file
+```
+
+## 🎯 First Run
+
+When you first run the application:
+1. A `reports.db` SQLite database will be created automatically
+2. The main window will show an empty template list
+3. Click "New Template" to create your first report template
+4. Templates will have default sections (Header, Detail, Footer)
+
+## 🐛 Troubleshooting
+
+### Issue: "SDK not found"
+**Solution:** Install .NET 8.0 SDK from https://dotnet.microsoft.com/download
+
+### Issue: "NuGet packages not restored"
+**Solution:** Run `dotnet restore` in the solution directory
+
+### Issue: Avalonia app doesn't display correctly
+**Solution:** Avalonia works best on Windows 10 version 1809 or later
+
+### Issue: Build warnings about NCalc compatibility
+**Note:** This is expected. NCalc 1.3.8 targets .NET Framework but works fine with .NET 8
+
+## 🔄 Syncing Changes from WSL
+
+If you make changes in WSL and want to update Windows copy:
+
+```bash
+# From WSL
+rsync -av --exclude='bin/' --exclude='obj/' --exclude='*.db' \
+  /home/lord/source/synopsis_claude/ \
+  /mnt/c/Users/eMich/source/synopsis_claude/
+```
+
+Or just copy specific files:
+```bash
+cp /home/lord/source/synopsis_claude/src/path/to/file.cs \
+   /mnt/c/Users/eMich/source/synopsis_claude/src/path/to/file.cs
+```
+
+## 📚 Next Steps
+
+1. Read `README.md` for project overview
+2. Check `PROGRESS.md` for what's implemented
+3. Review `/docs` folder for complete documentation
+4. Start developing the report designer canvas!
+
+## 🎨 Development on Windows
+
+The application uses **Avalonia UI**, which provides:
+- Native Windows support with hardware acceleration
+- Better performance than on WSL
+- Full designer support in Visual Studio/Rider
+- Hot reload during development
+
+Enjoy building the Report Generator! 🚀
