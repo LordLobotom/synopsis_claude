@@ -8,7 +8,8 @@
       "Bash(dotnet add package Dapper)",
       "Bash(dotnet add package Serilog)",
       "Bash(dotnet build)",
-      "Bash(rsync:*)"
+      "Bash(rsync:*)",
+      "Bash(dotnet build:*)"
     ],
     "deny": [],
     "ask": []

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReportGenerator.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7ac7f93f16b248f1c3c32bca80cc2b3f72ffdd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20ccd586c93c276109eeb576a82780aa5bbb37db")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReportGenerator.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReportGenerator.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

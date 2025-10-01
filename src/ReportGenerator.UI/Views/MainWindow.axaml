@@ -14,6 +14,9 @@
 
     <Window.Resources>
         <converters:PaperSizeToWidthConverter x:Key="PaperSizeToWidthConverter"/>
+        <converters:BoolToFontWeightConverter x:Key="BoolToFontWeightConverter"/>
+        <converters:BoolToFontStyleConverter x:Key="BoolToFontStyleConverter"/>
+        <converters:ElementTypeToCornerRadiusConverter x:Key="ElementTypeToCornerRadiusConverter"/>
     </Window.Resources>
 
     <DockPanel>
@@ -206,14 +209,51 @@
                                       Height="{Binding $parent[Canvas].Bounds.Height}"
                                       Fill="#f9f9f9" Opacity="0.5" />
 
-                            <!-- Sections will be rendered here -->
+                            <!-- Template Name -->
                             <TextBlock Canvas.Left="10" Canvas.Top="10"
                                       Text="{Binding DesignerViewModel.Template.Name, StringFormat='Template: {0}'}"
                                       FontSize="16" FontWeight="Bold" Foreground="#666" />
 
-                            <TextBlock Canvas.Left="10" Canvas.Top="35"
-                                      Text="Designer canvas - Sections and elements will be rendered here"
-                                      Foreground="#999" />
+                            <!-- Render all elements from selected section -->
+                            <ItemsControl ItemsSource="{Binding DesignerViewModel.SelectedSection.Elements}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <Canvas />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+
+                                <ItemsControl.Styles>
+                                    <Style Selector="ContentPresenter" x:DataType="domain:ReportElement">
+                                        <Setter Property="Canvas.Left" Value="{Binding X}" />
+                                        <Setter Property="Canvas.Top" Value="{Binding Y}" />
+                                    </Style>
+                                </ItemsControl.Styles>
+
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BorderBrush="{Binding ForeColor}"
+                                                BorderThickness="1"
+                                                Background="{Binding BackColor}"
+                                                Width="{Binding Width}"
+                                                Height="{Binding Height}"
+                                                CornerRadius="{Binding Type, Converter={StaticResource ElementTypeToCornerRadiusConverter}}"
+                                                Cursor="Hand"
+                                                Tapped="Element_Tapped"
+                                                Tag="{Binding}"
+                                                Name="ElementBorder">
+                                            <TextBlock Text="{Binding StaticText}"
+                                                      FontFamily="{Binding FontFamily}"
+                                                      FontSize="{Binding FontSize}"
+                                                      FontWeight="{Binding FontBold, Converter={StaticResource BoolToFontWeightConverter}}"
+                                                      FontStyle="{Binding FontItalic, Converter={StaticResource BoolToFontStyleConverter}}"
+                                                      Foreground="{Binding ForeColor}"
+                                                      TextAlignment="{Binding TextAlign}"
+                                                      VerticalAlignment="{Binding VerticalAlign}"
+                                                      Padding="2" />
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                         </Canvas>
                     </Border>
                 </ScrollViewer>

@@ -90,3 +90,81 @@
 2025-10-01 23:17:06.557 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
 2025-10-01 23:17:06.557 +02:00 [DBG] OpenDesigner: Switching to designer view
 2025-10-01 23:17:06.558 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 23:26:20.006 +02:00 [INF] === Report Generator Starting ===
+2025-10-01 23:26:20.049 +02:00 [INF] Initializing application
+2025-10-01 23:26:20.103 +02:00 [INF] Configuring services
+2025-10-01 23:26:20.103 +02:00 [DBG] Registering DbContext
+2025-10-01 23:26:20.105 +02:00 [DBG] Registering repositories
+2025-10-01 23:26:20.105 +02:00 [DBG] Registering domain services
+2025-10-01 23:26:20.105 +02:00 [DBG] Registering application services
+2025-10-01 23:26:20.105 +02:00 [DBG] Registering ViewModels
+2025-10-01 23:26:20.105 +02:00 [DBG] Building service provider
+2025-10-01 23:26:20.112 +02:00 [INF] Services configured successfully
+2025-10-01 23:26:20.113 +02:00 [INF] Application initialized successfully
+2025-10-01 23:26:20.153 +02:00 [INF] Framework initialization starting
+2025-10-01 23:26:20.153 +02:00 [DBG] Desktop lifetime detected
+2025-10-01 23:26:20.153 +02:00 [DBG] Disabling Avalonia data annotation validation
+2025-10-01 23:26:20.154 +02:00 [INF] Initializing database
+2025-10-01 23:26:20.771 +02:00 [INF] Database initialized
+2025-10-01 23:26:20.771 +02:00 [DBG] Creating MainWindow
+2025-10-01 23:26:21.392 +02:00 [INF] MainWindow created successfully
+2025-10-01 23:26:21.392 +02:00 [INF] Framework initialization completed
+2025-10-01 23:26:25.081 +02:00 [INF] OpenDesigner called
+2025-10-01 23:26:25.082 +02:00 [INF] OpenDesigner: Opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 23:26:25.086 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 23:26:25.089 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 23:26:25.089 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 23:26:25.093 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 23:26:25.094 +02:00 [INF] LoadTemplateAsync called for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+2025-10-01 23:26:25.094 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 23:26:25.209 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 23:26:25.210 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 23:26:25.210 +02:00 [DBG] OpenDesigner: Switching to designer view
+2025-10-01 23:26:25.211 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 23:27:27.478 +02:00 [INF] === Report Generator Starting ===
+2025-10-01 23:27:27.519 +02:00 [INF] Initializing application
+2025-10-01 23:27:27.569 +02:00 [INF] Configuring services
+2025-10-01 23:27:27.569 +02:00 [DBG] Registering DbContext
+2025-10-01 23:27:27.571 +02:00 [DBG] Registering repositories
+2025-10-01 23:27:27.571 +02:00 [DBG] Registering domain services
+2025-10-01 23:27:27.571 +02:00 [DBG] Registering application services
+2025-10-01 23:27:27.571 +02:00 [DBG] Registering ViewModels
+2025-10-01 23:27:27.571 +02:00 [DBG] Building service provider
+2025-10-01 23:27:27.578 +02:00 [INF] Services configured successfully
+2025-10-01 23:27:27.578 +02:00 [INF] Application initialized successfully
+2025-10-01 23:27:27.616 +02:00 [INF] Framework initialization starting
+2025-10-01 23:27:27.616 +02:00 [DBG] Desktop lifetime detected
+2025-10-01 23:27:27.616 +02:00 [DBG] Disabling Avalonia data annotation validation
+2025-10-01 23:27:27.617 +02:00 [INF] Initializing database
+2025-10-01 23:27:28.194 +02:00 [INF] Database initialized
+2025-10-01 23:27:28.194 +02:00 [DBG] Creating MainWindow
+2025-10-01 23:27:28.785 +02:00 [INF] MainWindow created successfully
+2025-10-01 23:27:28.785 +02:00 [INF] Framework initialization completed
+2025-10-01 23:27:31.994 +02:00 [INF] OpenDesigner called
+2025-10-01 23:27:31.995 +02:00 [INF] OpenDesigner: Opening designer for template "4b5566f8-3bdf-4232-97ea-c84177216522" - New Report
+2025-10-01 23:27:31.998 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 23:27:32.002 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 23:27:32.002 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 23:27:32.005 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 23:27:32.006 +02:00 [INF] LoadTemplateAsync called for template "4b5566f8-3bdf-4232-97ea-c84177216522"
+2025-10-01 23:27:32.007 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 23:27:32.120 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 23:27:32.120 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 23:27:32.120 +02:00 [DBG] OpenDesigner: Switching to designer view
+2025-10-01 23:27:32.121 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 23:27:33.574 +02:00 [INF] CloseDesigner called
+2025-10-01 23:27:33.580 +02:00 [INF] CloseDesigner: Returned to template list
+2025-10-01 23:27:42.649 +02:00 [INF] OpenDesigner called
+2025-10-01 23:27:42.649 +02:00 [INF] OpenDesigner: Opening designer for template "96b16a01-ff35-41a0-946b-17995a0c5ab2" - New Report
+2025-10-01 23:27:42.649 +02:00 [DBG] OpenDesigner: Getting ReportDesignerViewModel from DI container
+2025-10-01 23:27:42.649 +02:00 [INF] ReportDesignerViewModel constructor called
+2025-10-01 23:27:42.649 +02:00 [INF] ReportDesignerViewModel created successfully
+2025-10-01 23:27:42.650 +02:00 [DBG] OpenDesigner: Loading template async
+2025-10-01 23:27:42.650 +02:00 [INF] LoadTemplateAsync called for template "96b16a01-ff35-41a0-946b-17995a0c5ab2"
+2025-10-01 23:27:42.650 +02:00 [DBG] LoadTemplateAsync: Fetching template from service
+2025-10-01 23:27:42.653 +02:00 [DBG] LoadTemplateAsync: Template has 3 sections, selecting first
+2025-10-01 23:27:42.653 +02:00 [INF] LoadTemplateAsync: Template 'New Report' loaded successfully
+2025-10-01 23:27:42.653 +02:00 [DBG] OpenDesigner: Switching to designer view
+2025-10-01 23:27:42.653 +02:00 [INF] OpenDesigner: Successfully opened designer for 'New Report'
+2025-10-01 23:28:18.906 +02:00 [INF] CloseDesigner called
+2025-10-01 23:28:18.908 +02:00 [INF] CloseDesigner: Returned to template list
