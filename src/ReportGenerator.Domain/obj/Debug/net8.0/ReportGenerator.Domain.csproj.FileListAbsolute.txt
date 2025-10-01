@@ -9,3 +9,4 @@ C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\refint\ReportGenerator.Domain.dll
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.pdb
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ref\ReportGenerator.Domain.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.sourcelink.json

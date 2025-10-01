@@ -17,3 +17,4 @@ C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Infrastructure\obj\Deb
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Infrastructure\obj\Debug\net8.0\ReportGenerator.Infrastructure.pdb
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Infrastructure\obj\Debug\net8.0\ReportGenerator.Infrastructure.genruntimeconfig.cache
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Infrastructure\obj\Debug\net8.0\ref\ReportGenerator.Infrastructure.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Infrastructure\obj\Debug\net8.0\ReportGenerator.Infrastructure.sourcelink.json

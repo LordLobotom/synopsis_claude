@@ -245,3 +245,4 @@ C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\Re
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\ref\ReportGenerator.UI.dll
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.UI\obj\Debug\net8.0\ReportGenerator.UI.sourcelink.json

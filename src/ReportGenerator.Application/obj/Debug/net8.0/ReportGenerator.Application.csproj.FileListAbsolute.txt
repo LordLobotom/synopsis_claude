@@ -13,3 +13,4 @@ C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Application\obj\Debug\
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Application\obj\Debug\net8.0\refint\ReportGenerator.Application.dll
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Application\obj\Debug\net8.0\ReportGenerator.Application.pdb
 C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Application\obj\Debug\net8.0\ref\ReportGenerator.Application.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Application\obj\Debug\net8.0\ReportGenerator.Application.sourcelink.json
