@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet new:*)",
+      "Bash(dotnet sln:*)",
+      "Bash(dotnet add:*)",
+      "Bash(dotnet add package:*)",
+      "Bash(dotnet add package Dapper)",
+      "Bash(dotnet add package Serilog)",
+      "Bash(dotnet build)",
+      "Bash(rsync:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

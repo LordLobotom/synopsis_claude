@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ReportGenerator.Domain/1.0.0": {
+        "runtime": {
+          "ReportGenerator.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ReportGenerator.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

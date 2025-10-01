@@ -1,0 +1,11 @@
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\bin\Debug\net8.0\ReportGenerator.Domain.deps.json
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\bin\Debug\net8.0\ReportGenerator.Domain.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\bin\Debug\net8.0\ReportGenerator.Domain.pdb
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.AssemblyInfoInputs.cache
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.AssemblyInfo.cs
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\refint\ReportGenerator.Domain.dll
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ReportGenerator.Domain.pdb
+C:\Users\eMich\source\synopsis_claude\src\ReportGenerator.Domain\obj\Debug\net8.0\ref\ReportGenerator.Domain.dll
